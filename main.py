@@ -91,3 +91,5 @@ print(even_list([1,2,3,4,5,6,7,8,9,10]))
 even_odd = lambda x: "Парне" if x % 2 == 0 else "Непарне"
 
 print(even_odd(5))
+
+
