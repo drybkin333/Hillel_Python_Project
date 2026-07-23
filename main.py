@@ -1,4 +1,4 @@
-from math import remainder
+import math
 # 1. String
 sting = "Hello World"
 string1 = "My name is PY!"
@@ -17,9 +17,9 @@ def square(x):
 print(square(3))
 print(square(4))
 
-def sum(x, n):
+def add(x, n):
     return f"sum = {x + n}"
-print(sum(3,4))
+print(add(3,4))
 
 def divide_int(x: int, y: int):
     w = x // y
@@ -92,4 +92,15 @@ even_odd = lambda x: "Парне" if x % 2 == 0 else "Непарне"
 
 print(even_odd(5))
 
+# 8. Count Rabbit
 
+
+def count_rabbits(m):
+    a = 1
+    b = 1
+
+    for i in range(m -2):
+        a, b = b, a + b
+    return b * 2
+
+print(count_rabbits(10))
