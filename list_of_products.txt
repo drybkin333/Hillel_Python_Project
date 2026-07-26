@@ -1,0 +1,7 @@
+soccer ball,412435,10,sport,5
+basketball,332552,10,sport,4
+volleyball,095894,10,sport,9
+tractor,2832444,12,toys,3
+barbie,343532,15,toys,10
+lego,2435367,20,toys,10
+car,34289,8,toys,3
