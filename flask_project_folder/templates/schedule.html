@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>План тренувань</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>План тренувань</h1>
+
+<nav>
+    <a href="/">Головна</a> |
+    <a href="/schedule">План тренувань</a> |
+    <a href="/about">Про сайт</a>
+</nav>
+
+<hr>
+
+<table>
+    <tr>
+        <th>День</th>
+        <th>Тренування</th>
+    </tr>
+
+    {% for item in schedule %}
+    <tr>
+        <td>{{ item.day }}</td>
+        <td>{{ item.workout }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

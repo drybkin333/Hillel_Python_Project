@@ -50,7 +50,7 @@ class Order:
 
 products = []
 
-with open("list_of_product.txt", "r") as file:
+with open("list_of_products.txt", "r") as file:
     for line in file:
         name, id_number, price, category, in_stock = line.strip().split(",")
         product = Product(name, int(id_number), float(price), category, int(in_stock))
@@ -77,7 +77,7 @@ class Store:
                 print("The product already exists!")
                 return
         self.products.append(product)
-        with open("list_of_product.txt", "a") as file:
+        with open("list_of_products.txt", "a") as file:
             file.write(f"{product.name},{product.id_number},{product.price},{product.category},{product.in_stock}\n")
 
     def add_customer(self, customer: Customer):
