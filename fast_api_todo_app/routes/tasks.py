@@ -12,19 +12,6 @@ router = APIRouter(prefix='/tasks')
 def all_tasks():
     return tasks
 
-@router.post('/', response_model=TaskResponse, status_code=status.HTTP_201_CREATED)
-def create_task(task_create: TaskCreate):
-    new_task = {
-        'id' : len(tasks) + 1,
-        'title' : task_create.title,
-        'description' :task_create.description,
-        'completed': False
-    }
-
-    tasks.append(new_task)
-
-    return new_task
-
 @router.get('/{task_id}', response_model=TaskResponse)
 def read_task(task = Depends(get_task)):
     return task
