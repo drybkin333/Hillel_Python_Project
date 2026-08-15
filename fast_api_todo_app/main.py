@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 from routes.tasks import router as todos_router
 from routes.users import router as users_router
 import time
+from database import Base, engine
 
 app = FastAPI()
 
@@ -21,3 +22,5 @@ async def middleware(request: Request, call_next):
 
 app.include_router(todos_router)
 app.include_router(users_router)
+
+Base.metadata.create_all(engine)
